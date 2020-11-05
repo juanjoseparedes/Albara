@@ -1,0 +1,547 @@
+.app-composer {
+	font-size: 12px;
+}
+
+.app-composer .app-composer-table {
+	width: 100%;
+	border: solid 1px var(--app-background-color);
+}
+
+.app-composer .app-composer-table .app-composer-selectable:hover {
+	background-color: rgba(0, 0, 0, 0.1) !important;
+	cursor: pointer;
+}
+
+.app-composer .app-composer-table tr:hover td {
+
+}
+
+.app-composer .app-composer-table tr:first-child {
+
+}
+
+.app-composer .app-composer-table tr:first-child th {
+	padding-bottom: 4px !important;
+	padding-top: 4px !important;
+}
+
+.app-composer .app-composer-table tr:nth-child(even) {
+
+}
+
+.app-composer .app-composer-table tr {
+	border-bottom: solid 1px var(--app-background-color) !important;
+}
+
+.app-composer .app-composer-table tr th {
+	padding-right: 10px !important;
+	padding-left: 10px !important;
+}
+
+.app-composer .app-composer-table tr th span {
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-composer .app-composer-table tr td {
+	color: #333333;
+	border: none;
+	padding-right: 10px !important;
+	padding-left: 10px !important;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+}
+
+.app-composer-paging {
+
+}
+
+.app-composer-paging .app-composer-paging-box {
+	width: auto;
+	float: right;
+	text-align: center;
+	padding-top: 20px;
+	user-select: none;
+	padding-bottom: 10px;
+}
+
+.app-composer-paging .app-composer-paging-box i {
+	font-size: 20px;
+	padding: 5px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-composer-paging .app-composer-paging-box span {
+	padding: 5px;
+	position: relative;
+	top: -3px;
+	user-select: none;
+}
+
+.app-composer-tools-left .app-field-parent {
+	float: left;
+	margin-right: 10px !important;
+}
+
+.app-composer-tools-right .app-field-parent {
+	float: right;
+	margin-left: 10px !important;
+}
+
+.app-composer-tools-left i {
+	float: left;
+}
+
+.app-composer-tools-right i:first-child {
+	float: right;
+	margin-left: 10px !important;
+}
+
+.app-composer-tools-right i {
+	float: right;
+	margin-left: 10px !important;
+}
+
+.app-composer-tools .app-field-parent {
+	display: inline-block !important;
+}
+
+.app-composer-tools .app-field-parent .app-field-input-container {
+	padding-bottom: 10px !important;
+}
+
+.app-composer-tools input {
+	background-color: white !important;
+	margin-top: 8px !important;
+	text-indent: 8px !important;
+}
+
+.app-composer-tools select {
+	background-color: white !important;
+	margin-top: 8px !important;
+	text-indent: 8px !important;
+}
+
+.app-composer-tools {
+
+}
+
+.app-composer-tools i:hover {
+	color: var(--app-background-color) !important;
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-composer-tools i {
+	display: inline !important;
+	position: relative;
+	top: 32px;
+	font-size: 22px;
+}
+
+.app-composer-paging-btn-disabled {
+	opacity: 0.5;
+	cursor: default !important;
+}
+
+.app-composer-icon-header {
+
+}
+
+.app-composer-icon-cell {
+	width: 30px;
+	text-align: center;
+}
+
+.app-composer-action {
+	width: 30px;
+	text-align: center;
+}
+
+.app-composer-action i:hover {
+	color: var(--app-background-color) !important;
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-composer-title {
+	color: var(--app-background-darker);
+	background-color: var(--app-background-lighter) !important;
+	padding: 3px;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-top: 5px;
+	border-bottom: solid 1px var(--app-background-color);
+}
+
+.app-composer-widgets-container {
+	width: 100%;
+	margin-top: 10px;
+	display: table;
+}
+
+.app-composer-widgets-subcontainer {
+	position: relative;
+	left: -5px;
+	top: -5px;
+	margin-right: -10px;
+	margin-bottom: -10px;
+}
+
+.app-composer-widget {
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px;
+}
+
+.grid-empty-label {
+
+}
+
+.grid-empty-icon {
+
+}
+
+
+.app-composer-empty-container {
+	user-select: none;
+	margin: 0 auto;
+	margin-top: 10vh !important;
+	text-align: center;
+	font-size: 1em;
+	display: table;
+}
+
+.app-composer-empty-container .icon {
+	font-weight: 400;
+	font-size: 3.2em;
+	text-align: right;
+	border-right: solid 1px #c0c0c0;
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	padding-right: 10px;
+	padding-top: 1px;
+	color: var(--app-background-dark) !important;
+	opacity: 0.5 !important;
+}
+
+.app-composer-empty-container .message {
+	margin: 0;
+	display: inline-block;
+	text-align: left;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: var(--app-background-dark);
+
+}
+
+.app-composer-empty-container .message div {
+	padding-left: 10px;
+	margin: 0;
+}
+
+.app-composer-empty-container a {
+	font-size: 1em;
+	background-color: transparent !important;
+	border: none;
+	margin-left: 11px !important;
+	color: #4e4cc6 !important;
+}
+
+.app-composer-empty-container a:hover {
+	text-decoration: underline !important;
+	opacity: 1;
+}
+
+.app-composer-chips .app-chip:not(:last-child) {
+	margin-right: 5px !important;
+}
+
+.app-composer-chips .app-chip {
+	padding-top: 1px !important;
+	padding-bottom: 1px !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	position: relative;
+	top: -1px;
+}
+
+
+.app-composer-day {
+	font-weight: bold;
+	background-color: var(--app-background-color);
+
+}
+
+.app-composer-category-group:not(:last-child) {
+	border-bottom: solid 1px var(--app-background-color);
+}
+
+.app-composer-day .app-composer-day-name {
+	width: 110px;
+	text-align: left;
+}
+
+.app-composer-day .app-composer-day-name i {
+	float: right;
+	position: relative;
+	top: 3px;
+	left: 1px;
+	cursor: pointer;
+}
+
+
+.app-composer-day .app-composer-day-name i:hover {
+	color: var(--app-active-color) !important;
+	cursor: pointer;
+}
+
+.app-composer-day td {
+	color: var(--app-foreground-color) !important;
+}
+
+
+.app-composer-top {
+	background-color: var(--app-background-medium) !important;
+}
+
+.app-composer-top td {
+	font-weight: bold;
+}
+
+
+.app-composer-category {
+	background-color: var(--app-background-color) !important;
+}
+
+.app-composer-category td {
+	font-weight: bold;
+	color: var(--app-foreground-color) !important;
+}
+
+.app-composer-article .app-composer-article-name span {
+
+}
+
+.app-composer-quantity:not(:first-child) {
+	border-left: solid 1px var(--app-background-color) !important;
+	width: 110px;
+}
+
+.app-composer-quantity i {
+	display: none;
+}
+
+.app-composer-quantity span {
+
+}
+
+.app-composer-article .app-composer-quantity:hover {
+	background-color: #cfcfcf;
+
+}
+
+.app-composer-article .app-composer-quantity:hover span {
+	color: black;
+}
+
+.app-composer-article .app-composer-quantity {
+	cursor: pointer;
+	text-align: center !important;
+}
+
+.app-composer-article:hover .app-composer-article-name {
+
+}
+
+.app-composer-article:hover .app-composer-total span {
+
+}
+
+.app-composer-article:hover .app-composer-unit {
+
+}
+
+.app-composer-article:hover .app-composer-quantity {
+
+}
+
+.app-composer-day .app-composer-category-total {
+	text-align: left;
+}
+
+.app-composer-category-day {
+	text-align: center !important;
+}
+
+.app-composer-category-total i {
+	float: right;
+	position: relative;
+	top: 3px;
+	left: 1px;
+	cursor: pointer;
+}
+
+.app-composer-day-hover {
+	background-color: var(--app-background-color) !important;
+	color: yellow !important;
+}
+
+.app-composer-day-hover .day {
+	color: yellow;
+}
+
+.app-composer-product-hover {
+	background-color: var(--app-background-color) !important;
+	color: yellow !important;
+}
+
+.app-composer-total {
+	border-left: solid 1px var(--app-background-color) !important;
+	text-align: right !important;
+	width: 40%;
+}
+
+.app-composer-total span {
+	float: right;
+	font-weight: bold;
+}
+
+.app-composer-unit {
+
+	text-align: left !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}
+
+.app-composer-unit span {
+
+}
+
+
+.app-composer-tables-contaiener {
+	border: none;
+	border-spacing: 0;
+}
+
+.app-composer-tables-contaiener td {
+	vertical-align: top;
+}
+
+
+.app-composer-table-products .app-composer-article-name {
+	width: auto;
+}
+
+.app-composer-table-products {
+	table-layout: fixed;
+}
+
+.app-composer-table-quantities {
+	border-left: none !important;
+	border-right: none !important;
+}
+
+.app-composer-table-products td {
+
+}
+
+.app-composer-left-column {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+.app-composer-table-units .app-composer-article-name {
+	width: auto;
+}
+
+.app-composer-table-units {
+	table-layout: fixed;
+}
+
+.app-composer-table-units td {
+
+}
+
+.app-composer-right-column {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.app-composer-day-free span {
+	color: #333333 !important;
+}
+
+.app-composer-day-free {
+	opacity: 0.6;
+	cursor: default !important;
+
+	background-image: url(/images/page/strip1.png);
+}
+
+.app-composer-day-free:not(:first-child) {
+	border-left: solid 1px var(--app-background-color) !important;
+}
+
+.app-composer-day-print:hover {
+	background-color: #38752c;
+	cursor: pointer;
+}
+
+.app-composer-day-print:hover span {
+	color: yellow;
+}
+
+.app-composer-cell-normal {
+	background-color: #fff1ee;
+}
+
+.app-composer-cell-override {
+	background-color: #ffdcb7;
+}
+
+.app-composer-cell-outdate {
+	background-color: #ff8c8b;
+}
+
+.app-composer-cell-printed {
+	background-color: var(--app-background-color);
+	opacity: 0.7;
+}
+
+.app-composer-cell-printed:not(:first-child) {
+	border-left: solid 1px var(--app-background-color) !important;
+	width: 110px;
+}
+
+.app-composer-cell-printed span {
+	color: white;
+	font-weight: bold;
+}
+
+.app-composer-cell-printed {
+	text-align: center !important;
+	background-image: url(/images/page/strip1.png);
+	background-blend-mode: color-burn;
+}
+
+
+/*
+.app-composer-cell-printed:hover {
+	background-color: var(--app-background-color) !important;
+	cursor: default !important;
+	color: white;
+	font-weight: bold;
+}
+
+.app-composer-cell-printed:hover span {
+	color: white!important;
+}*/

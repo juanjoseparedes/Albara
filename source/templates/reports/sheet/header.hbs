@@ -1,0 +1,247 @@
+<style>
+	.rep-title {
+		font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: bold;
+	}
+
+	.rep-logo img {
+		max-height: 80px;
+		padding-right: 10px;
+	}
+
+	.rep-logo + td {
+		border-left: solid 1px #c0c0c0;
+		padding-left: 10px;
+	}
+
+	.rep-logo {
+		width: 1px;
+		padding: 0 !important;
+
+	}
+
+	.rep-logo:empty {
+		display: none;
+	}
+
+	.rep-logo:empty + td {
+		border-left: none;
+		padding-left: 0px;
+	}
+
+	.rep-barcode {
+	}
+
+	.rep-barcode img {
+		width: 100%;
+	}
+
+	.rep-titles {
+		vertical-align: top;
+		padding-right: 10px;
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
+
+	.rep-titles div {
+		padding-top: 4px;
+		padding-bottom: 3px;
+	}
+
+	.rep-titles .rep-main-title {
+		font-size: 13.5pt;
+		font-weight: bold;
+		padding-bottom: 5px;
+	}
+
+	.rep-medium-size {
+		font-size: 11pt;
+	}
+
+	.rep-large-size {
+		font-size: 14pt;
+		white-space: nowrap;
+	}
+
+	.rep-header-identity {
+		vertical-align: top;
+		padding-top: 5px;
+		text-align: right;
+		width: 30%;
+	}
+
+	.rep-header-naming {
+		vertical-align: top;
+	}
+
+	.rep-header-naming table {
+		width: 100%;
+	}
+
+	.rep-date-code {
+		margin-top: 12px;
+		text-align: right;
+		font-size: 12pt;
+	}
+
+	.rep-date-code table {
+		width: 100%;
+	}
+
+	.rap-gub {
+		text-align: right;
+	}
+
+	.rep-blue {
+		color: blue
+	}
+
+	.rep-red {
+		color: #d90000
+	}
+
+	.rep-blue {
+		color: blue
+	}
+
+	.rep-date {
+		padding-top: 3px;
+		text-align: right;
+	}
+
+	.rep-fields {
+		margin-top: 35px;
+	}
+
+	.rep-fields table {
+		width: 100%;
+		font-size: 0.9em;
+	}
+
+	.rep-fields table tr td {
+		padding-top: 10px;
+	}
+
+	.rep-left-content {
+		white-space: nowrap;
+		padding-right: 10px;
+		border-bottom: solid 1px transparent;
+		font-weight: bold;
+		width: 1px;
+	}
+
+	.rep-value-content {
+		border-bottom: solid 1px black;
+	}
+
+	.rep-middle-content {
+		padding-left: 10px;
+	}
+</style>
+
+<div>
+	<table cellpadding="0" cellspacing="0" style="width: 100%">
+		<tr>
+			<td class="rep-header-naming">
+				<table cellspacing="0" cellpadding="0">
+					<td class="rep-logo">{{{logo}}}</td>
+					<td class="rep-titles">
+						<div class="rep-main-title">{{provider.name}}</div>
+						<div class="rep-medium-size">{{provider.location.address}}</div>
+						<div class="rep-medium-size">Ciudad: {{provider.location.city.name}}</div>
+						<div class="rep-medium-size">Teléfono: {{provider.administrator.phone}}</div>
+						<div class="rep-medium-size">{{identityType}}: {{provider.identity.number}}</div>
+					</td>
+				</table>
+			</td>
+			<td class="rep-header-identity">
+				<div class="rep-barcode">{{{barcode}}}</div>
+				<div class="rep-date-code">
+					<table>
+						<tr>
+							<td class="rep-date rep-medium-size">
+								Conduce No.:
+							</td>
+							<td class="rep-date rep-medium-size rep-blue">
+								<b>{{identities.provider}}</b>
+							</td>
+						</tr>
+						<tr>
+							<td class="rep-date rep-medium-size">
+								Fecha:
+							</td>
+							<td class="rep-date rep-medium-size">
+								{{timestamp.day}}-{{timestamp.month}}-{{timestamp.year}}
+							</td>
+						</tr>
+						<tr>
+							<td class="rep-date rep-medium-size">
+								Modalidad:
+							</td>
+							<td class="rep-date rep-medium-size rep-blue">
+								<b>{{category.name}}</b>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<div class="rep-fields">
+		<table cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="rep-left-content">
+					Centro Educativo
+				</td>
+				<td colspan="3" class="rep-value-content">
+					{{institution.name}}
+				</td>
+			</tr>
+			<tr>
+				<td class="rep-left-content">
+					Código
+				</td>
+				<td class="rep-value-content">
+					{{institution.code}}
+				</td>
+				<td class="rep-left-content rep-middle-content">
+					Teléfono
+				</td>
+				<td class="rep-value-content">
+					{{institution.phone}}
+				</td>
+			</tr>
+			<tr>
+				<td class="rep-left-content">
+					Director del Centro
+				</td>
+				<td colspan="3" class="rep-value-content">
+					{{institution.director.first_name}} {{institution.director.last_name}}
+				</td>
+			</tr>
+			<tr>
+				<td class="rep-left-content">
+					Dirección del Centro
+				</td>
+				<td colspan="3" class="rep-value-content">
+					{{institution.location.address}}
+				</td>
+			</tr>
+			<tr>
+				<td class="rep-left-content">
+					Provincia / Municipio
+				</td>
+				<td class="rep-value-content">
+					{{institution.location.province.name}}
+				</td>
+				<td class="rep-left-content rep-middle-content">
+					Regional / Distrito
+				</td>
+				<td class="rep-value-content">
+					{{institution.location.region.name}}
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

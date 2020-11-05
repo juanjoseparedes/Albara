@@ -1,0 +1,99 @@
+<style>
+	.line-space {
+		border-bottom: solid 1px black;
+	}
+
+	.table-spacing {
+		width: 100%;
+		font-size: 0.9em;
+	}
+
+	.table-spacing td {
+		padding-top: 8px;
+		padding-bottom: 2px;
+	}
+
+	.table-ob {
+		width: 1px;
+		white-space: nowrap;
+		padding-right: 10px;
+	}
+
+	.sign-text {
+		font-size: 9pt;
+	}
+
+	.sign-square {
+		vertical-align: bottom;
+		border-top: solid 1px black;
+		padding: 4px;
+		text-align: center;
+	}
+
+	.sign-square span {
+
+	}
+
+	.footer-table {
+		width: 100%;
+	}
+
+	.footer-right-table {
+
+	}
+</style>
+<div>
+	<table class="table-spacing" cellspacing="0"cellpadding="0">
+		<tr>
+			<td class="table-ob">Observaciones:</td>
+			<td class="line-space">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="line-space">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<table class="footer-table" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="sign-text" style="width: 40vw; vertical-align: bottom">
+				<div class="sign-square">
+					<span>FIRMA Y SELLO DEL SUPLIDOR</span>
+				</div>
+			</td>
+			<td style="padding-left: 20px;padding-top: 0px">
+				<table class="table-spacing footer-right-table" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="table-ob">Recibido Por</td>
+						<td class="line-space" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="table-ob">Firma</td>
+						<td class="line-space" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="table-ob">Fecha Recepción</td>
+						<td class="line-space">&nbsp;</td>
+						<td class="table-ob">Hora</td>
+						<td class="line-space">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="sign-text" colspan="4" style="vertical-align: bottom; padding-top: 120px">
+							<div class="sign-square" style="position: relative; top:2px">
+								<span>SELLO DEL CENTRO</span>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size: 7pt; padding-top: 20px">
+				Fecha Impresión: {{#if dates.printed null}}(ninguna){{else}}{{date dates.printed "long"}}{{/if}}
+			</td>
+		</tr>
+	</table>
+</div>
+

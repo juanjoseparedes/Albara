@@ -1,0 +1,137 @@
+<style>
+	.rep-subtitle {
+		font-size: 1em;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.rep-body {
+		padding-top: 50px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 50px;
+		font-family: sans-serif;
+	}
+
+	.rep-footer-container {
+		margin-top: 25px;
+	}
+
+	.rep-detail {
+		margin-top: 50px;
+	}
+
+	.rep-detail .rep-content {
+		margin-top: 15px;
+		min-height: 200px;
+	}
+
+	.rep-detail .rep-content table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.rep-detail .rep-content table td {
+		font-size: 0.8em;
+	}
+
+	.rep-detail-value-text {
+		text-align: left;
+		padding-left: 10px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.rep-detail-value-left {
+		padding-left: 10px;
+	}
+
+	.rep-detail-value-right {
+		padding-right: 20px;
+	}
+
+	.rep-detail-value-number {
+		text-align: right;
+		white-space: nowrap;
+		padding-right: 10px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.rep-detail-header-row {
+		background-color: #80e999;
+		font-weight: bold;
+	}
+
+	.rep-detail-items-row {
+
+	}
+
+	.rep-detail-items-row:nth-child(odd) {
+		background-color: #eeeeee;
+	}
+
+	.rep-detail-footer-row {
+		background-color: #80e999;
+		font-weight: bold;
+	}
+
+	.rep-detail-total-title {
+		text-align: right;
+		padding-right: 10px;
+		font-weight: bold;
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+
+	.rep-detail-total-value {
+		background-color: #80e999;
+		border-bottom: solid 1px #478d58;
+		text-align: right;
+		padding-right: 10px;
+	}
+</style>
+
+
+<div class="rep-body">
+	<div>
+		{{> header}}
+	</div>
+	<div class="rep-detail">
+		<div class="rep-subtitle">
+			DETALLE DE LAS RACIONES ENTREGADAS Y RECIBIDAS
+		</div>
+
+		<div class="rep-content">
+			<table>
+				<tr class="rep-detail-header-row">
+					<td class="rep-detail-value-text rep-detail-value-left">
+						DESCRPICIÓN DEL PRODUCTO
+					</td>
+					<td class="rep-detail-value-number">
+						CANTIDAD
+					</td>
+					<td class="rep-detail-value-text rep-detail-value-right">
+						UNIDAD
+					</td>
+				</tr>
+				{{#each details}}
+					<tr class="rep-detail-items-row">
+						<td class="rep-detail-value-text rep-detail-value-left">
+							{{this.product.name}}
+						</td>
+						<td class="rep-detail-value-number">
+							{{this.quantity}}
+						</td>
+						<td class="rep-detail-value-text rep-detail-value-right">
+							{{this.product.unit.value.meta.plural_sufix.value}}
+						</td>
+					</tr>
+				{{/each}}
+			</table>
+		</div>
+	</div>
+	<div class="rep-footer-container">
+		{{> footer}}
+	</div>
+</div>

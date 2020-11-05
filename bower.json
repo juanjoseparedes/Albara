@@ -1,0 +1,31 @@
+{
+  "name": "albara",
+  "description": "Albará",
+  "main": "entry.js",
+  "authors": [
+    "Eduardo Rosario <erosario@nodrix.com> (https://nodrix.com)"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests",
+    "bower_components",
+    "source/common/static/vendors",
+    "package.json",
+    "src"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^5.7.2",
+    "chroma-js": "^2.0.3",
+    "bootstrap": "v4.0.0-alpha.6",
+    "jquery": "2.1.4",
+    "tether": "^1.4.4",
+    "underscore": "1.8.3",
+    "PACE": "pace#^1.0.2",
+    "screenfull": "^4.0.1",
+    "moment": "^2.24.0"
+  }
+}

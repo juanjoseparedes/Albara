@@ -1,0 +1,25 @@
+{
+  "apps" : [
+	{
+	  "name" : "albara",
+	  "script" : "entry.js",
+	  "watch" : true,
+	  "ignore_watch" : [
+		"node_modules",
+		"logs",
+		"storage",
+		"source/static/vendors",
+		"source/includes",
+		"source/scopes",
+		"source/static",
+		"source/templates"
+	  ],
+	  "env" : {
+		"NODE_ENV" : "development"
+	  },
+	  "env_production" : {
+		"NODE_ENV" : "production"
+	  }
+	}
+  ]
+}

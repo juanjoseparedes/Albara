@@ -1,0 +1,12 @@
+@import url(../fonts/roboto/font.css);
+
+body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0!important;
+}
+
+a, router-link {
+	color: #675dff;
+	cursor: pointer!important;
+	text-decoration: underline;
+}

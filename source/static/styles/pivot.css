@@ -1,0 +1,402 @@
+.app-pivot {
+
+}
+
+.app-pivot .app-pivot-table {
+	width: 100%;
+	border: solid 1px var(--app-background-color) !important;
+}
+
+.app-pivot .app-pivot-table .app-pivot-selectable:hover {
+	background-color: rgba(0, 0, 0, 0.1) !important;
+	cursor: pointer;
+}
+
+.app-pivot .app-pivot-table tr:hover td {
+
+}
+
+.app-pivot .app-pivot-table tr:first-child {
+
+}
+
+.app-pivot .app-pivot-table tr:first-child th {
+	padding-bottom: 4px !important;
+	padding-top: 4px !important;
+}
+
+.app-pivot .app-pivot-table tr:nth-child(even) {
+	background-color: rgba(40, 40, 40, 0.05);
+}
+
+.app-pivot .app-pivot-table tr th {
+	padding-right: 10px !important;
+	padding-left: 10px !important;
+}
+
+.app-pivot .app-pivot-table tr th span {
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-pivot .app-pivot-table tr td {
+	color: #333333;
+	border: none;
+	padding-right: 10px !important;
+	padding-left: 10px !important;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+}
+
+.app-pivot-paging {
+
+}
+
+.app-pivot-paging .app-pivot-paging-box {
+	width: auto;
+	float: right;
+	text-align: center;
+	padding-top: 20px;
+	user-select: none;
+	padding-bottom: 10px;
+}
+
+.app-pivot-paging .app-pivot-paging-box i {
+	font-size: 20px;
+	padding: 5px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-pivot-paging .app-pivot-paging-box span {
+	padding: 5px;
+	position: relative;
+	top: -3px;
+	user-select: none;
+}
+
+.app-pivot-tools-left .app-field-parent {
+	float: left;
+	margin-right: 10px !important;
+}
+
+.app-pivot-tools-right .app-field-parent {
+	float: right;
+	margin-left: 10px !important;
+}
+
+.app-pivot-tools-left i {
+	float: left;
+}
+
+.app-pivot-tools-right i:first-child {
+	float: right;
+	margin-left: 10px !important;
+}
+
+.app-pivot-tools-right i {
+	float: right;
+	margin-left: 10px !important;
+}
+
+.app-pivot-tools .app-field-parent {
+	display: inline-block !important;
+}
+
+.app-pivot-tools .app-field-parent .app-field-input-container {
+	padding-bottom: 10px !important;
+}
+
+.app-pivot-tools input {
+	background-color: white !important;
+	margin-top: 8px !important;
+	text-indent: 8px !important;
+}
+
+.app-pivot-tools select {
+	background-color: white !important;
+	margin-top: 8px !important;
+	text-indent: 8px !important;
+}
+
+.app-pivot-tools {
+
+}
+
+.app-pivot-tools i:hover {
+	color: var(--app-background-color) !important;
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-pivot-tools i {
+	display: inline !important;
+	position: relative;
+	top: 32px;
+	font-size: 22px;
+}
+
+.app-pivot-paging-btn-disabled {
+	opacity: 0.5;
+	cursor: default !important;
+}
+
+.app-pivot-icon-header {
+
+}
+
+.app-pivot-icon-cell {
+	width: 30px;
+	text-align: center;
+}
+
+.app-pivot-action {
+	width: 30px;
+	text-align: center;
+}
+
+.app-pivot-action i:hover {
+	color: var(--app-background-color) !important;
+	cursor: pointer;
+	user-select: none;
+}
+
+.app-pivot-title {
+	color: var(--app-background-darker);
+	background-color: var(--app-background-lighter) !important;
+	padding: 3px;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-top: 5px;
+	border-bottom: solid 1px var(--app-background-color);
+}
+
+.app-pivot-widgets-container {
+	width: 100%;
+	margin-top: 10px;
+	display: table;
+}
+
+.app-pivot-widgets-subcontainer {
+	position: relative;
+	left: -5px;
+	top: -5px;
+	margin-right: -10px;
+	margin-bottom: -10px;
+}
+
+.app-pivot-widget {
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px;
+}
+
+.grid-empty-label {
+
+}
+
+.grid-empty-icon {
+
+}
+
+
+.app-pivot-empty-container {
+	user-select: none;
+	margin: 0 auto;
+	margin-top: 10vh !important;
+	text-align: center;
+	font-size: 1em;
+	display: table;
+}
+
+.app-pivot-empty-container .icon {
+	font-weight: 400;
+	font-size: 3.2em;
+	text-align: right;
+	border-right: solid 1px #c0c0c0;
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	padding-right: 10px;
+	padding-top: 1px;
+	color: var(--app-background-dark) !important;
+	opacity: 0.5 !important;
+}
+
+.app-pivot-empty-container .message {
+	margin: 0;
+	display: inline-block;
+	text-align: left;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: var(--app-background-dark);
+
+}
+
+.app-pivot-empty-container .message div {
+	padding-left: 10px;
+	margin: 0;
+}
+
+.app-pivot-empty-container a {
+	font-size: 1em;
+	background-color: transparent !important;
+	border: none;
+	margin-left: 11px !important;
+	color: #4e4cc6 !important;
+}
+
+.app-pivot-empty-container a:hover {
+	text-decoration: underline !important;
+	opacity: 1;
+}
+
+.app-pivot-chips .app-chip:not(:last-child) {
+	margin-right: 5px !important;
+}
+
+.app-pivot-chips .app-chip {
+	padding-top: 1px !important;
+	padding-bottom: 1px !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	position: relative;
+	top: -1px;
+}
+
+
+.app-pivot-period {
+	font-weight: bold;
+	background-color: var(--app-background-color);
+
+}
+
+.app-pivot-category-group:not(:last-child) {
+	border-bottom: solid 1px var(--app-background-color);
+}
+
+.app-pivot-period .app-pivot-period-name {
+	width: 110px;
+	text-align: left;
+}
+
+.app-pivot-period .app-pivot-period-name i {
+	float: right;
+	position: relative;
+	top: 3px;
+	left: 1px;
+	cursor: pointer;
+}
+
+
+.app-pivot-period .app-pivot-period-name i:hover {
+	color: var(--app-active-color) !important;
+	cursor: pointer;
+}
+
+.app-pivot-period td {
+	color: var(--app-foreground-color) !important;
+}
+
+.app-pivot-category {
+	background-color: var(--app-background-color) !important;
+}
+
+.app-pivot-category td {
+	font-weight: bold;
+	color: var(--app-foreground-color) !important;
+}
+
+.app-pivot-article .app-pivot-article-name span {
+
+}
+
+.app-pivot-quantity {
+	border-left: solid 1px #c0c0c0 !important;
+	text-align: right !important;
+	width: 110px;
+}
+
+.app-pivot-quantity i {
+	display: none;
+}
+
+.app-pivot-quantity span {
+	float: right;
+}
+
+.app-pivot-quantity:hover i {
+	display: block;
+	padding: 0 !important;
+	margin: 0 !important;
+	cursor: pointer;
+	text-align: left;
+	position: relative;
+	top: 3px;
+	left: -1px;
+}
+
+.app-pivot-article .app-pivot-quantity:hover {
+
+}
+
+.app-pivot-article .app-pivot-quantity {
+
+}
+
+.app-pivot-article:hover .app-pivot-article-name {
+	color: var(--app-background-color);
+}
+
+.app-pivot-article:hover .app-pivot-total span {
+	color: var(--app-background-color);
+}
+
+.app-pivot-article:hover .app-pivot-unit {
+	color: var(--app-background-color);
+}
+
+.app-pivot-article:hover .app-pivot-quantity {
+	color: var(--app-background-color);
+}
+
+.app-pivot-period .app-pivot-category-total {
+	border-left: solid 1px #c0c0c0 !important;
+	text-align: left;
+}
+
+.app-pivot-category-total i {
+	float: right;
+	position: relative;
+	top: 3px;
+	left: 1px;
+	cursor: pointer;
+}
+
+.app-pivot-period-hover span {
+	color: yellow !important;
+}
+
+.app-pivot-total {
+	border-left: solid 1px #c0c0c0 !important;
+	text-align: right !important;
+	max-width: 80px !important;
+}
+
+.app-pivot-total span {
+	float: right;
+	font-weight: bold;
+}
+
+.app-pivot-unit {
+	border-left: solid 1px #c0c0c0 !important;
+	text-align: left !important;
+	max-width: 120px !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}
+
+.app-pivot-unit span {
+
+}

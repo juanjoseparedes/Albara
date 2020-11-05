@@ -1,0 +1,58 @@
+<style>
+	.rep-line-space {
+		border-bottom: solid 1px black;
+	}
+
+	.rep-table-spacing {
+		width: 100%;
+		font-size: 0.9em;
+	}
+
+	.rep-table-spacing td {
+		padding-top: 8px;
+		padding-bottom: 2px;
+	}
+
+	.rep-table-ob {
+		width: 1px;
+		white-space: nowrap;
+		padding-right: 10px;
+	}
+
+	.rep-sign-text {
+		font-size: 9pt;
+	}
+
+	.rep-sign-square {
+		vertical-align: bottom;
+		border-top: solid 1px black;
+		padding: 4px;
+		text-align: center;
+	}
+
+	.rep-sign-square span {
+
+	}
+
+	.rep-footer-table {
+		width: 100%;
+	}
+</style>
+
+<div>
+	<table class="rep-footer-table" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="rep-sign-text" style="vertical-align: bottom; padding-left: 20%; padding-right: 20%; padding-top: 100px">
+				<div class="rep-sign-square">
+					<span>FIRMA Y SELLO DEL SUPLIDOR</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size: 7pt; padding-top: 20px">
+				Fecha Impresión: {{#if dates.printed null}}(ninguna){{else}}{{date dates.printed "long"}}{{/if}}
+			</td>
+		</tr>
+	</table>
+</div>
+

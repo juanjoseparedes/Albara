@@ -1,0 +1,240 @@
+<style>
+	.rep-body {
+		padding-top: 50px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 50px;
+		font-family: sans-serif;
+	}
+
+	.rep-footer-container {
+		margin-top: 25px;
+	}
+
+	.rep-detail {
+		margin-top: 50px;
+	}
+
+	.rep-detail .rep-content {
+		margin-top: 15px;
+		min-height: 500px;
+	}
+
+	.rep-detail .rep-content table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.rep-detail .rep-content table td {
+		font-size: 0.8em;
+	}
+
+	.rep-detail-value-text {
+		text-align: left;
+		padding-left: 10px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.rep-detail-value-left {
+		padding-left: 10px;
+	}
+
+	.rep-detail-value-right {
+		padding-right: 20px;
+	}
+
+	.rep-detail-value-number {
+		text-align: right;
+		white-space: nowrap;
+		padding-right: 10px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.rep-detail-header-row {
+		background-color: #80e999;
+		font-weight: bold;
+	}
+
+	.rep-detail-items-row {
+
+	}
+
+	.rep-detail-items-row:nth-child(odd) {
+		background-color: #eeeeee;
+	}
+
+	.rep-detail-footer-row {
+		background-color: #80e999;
+		font-weight: bold;
+	}
+
+	.rep-detail-total-title {
+		text-align: right;
+		padding-right: 10px;
+		font-weight: bold;
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+
+	.rep-detail-total-value {
+		background-color: #80e999;
+		border-bottom: solid 1px #478d58;
+		text-align: right;
+		padding-right: 10px;
+	}
+</style>
+
+<div class="rep-body">
+	<div>
+		{{> header}}
+	</div>
+	<div class="rep-detail">
+		<div class="rep-content">
+			<table cellspacing="0" cellpadding="0" style="margin-bottom: 20px">
+				<tr class="rep-detail-header-row">
+					<td class="rep-detail-value-text rep-detail-value-left">
+						PERÍODO DE FACTURA
+					</td>
+					<td class="rep-detail-value-text">
+						CANTIDAD DE CONDUCES
+					</td>
+					<td class="rep-detail-value-text">
+						CONDUCE INICIAL
+					</td>
+					<td class="rep-detail-value-text rep-detail-value-right">
+						CONDUCE FINAL
+					</td>
+				</tr>
+				<tr class="rep-detail-items-row">
+					<td class="rep-detail-value-text rep-detail-value-left">
+						{{monthName trace.month}} {{trace.year}}
+					</td>
+					<td class="rep-detail-value-text">
+						{{sheets.length}}
+					</td>
+					<td class="rep-detail-value-text">
+						{{trace.number}}
+					</td>
+					<td class="rep-detail-value-text rep-detail-value-right">
+						{{finalSheet}}
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr class="rep-detail-header-row">
+					<td class="rep-detail-value-text rep-detail-value-left">
+						DESCRPICIÓN DEL PRODUCTO
+					</td>
+					<td class="rep-detail-value-number">
+						CANTIDAD
+					</td>
+					<td class="rep-detail-value-text">
+						UNIDAD
+					</td>
+					<td class="rep-detail-value-number">
+						PRECIO
+					</td>
+					<td class="rep-detail-value-number">
+						ITBIS
+					</td>
+					<td>
+
+					</td>
+					<td class="rep-detail-value-number rep-detail-value-right">
+						VALOR RD$
+					</td>
+				</tr>
+				{{#each details}}
+					<tr class="rep-detail-items-row">
+						<td class="rep-detail-value-text rep-detail-value-left">
+							{{this.product.name}}
+						</td>
+						<td class="rep-detail-value-number">
+							{{this.quantity}}
+						</td>
+						<td class="rep-detail-value-text">
+							{{this.product.unit.value.meta.plural_sufix.value}}
+						</td>
+						<td class="rep-detail-value-number">
+							{{number this.price.amount}}
+						</td>
+						<td class="rep-detail-value-number">
+							{{number this.price.taxsum}}
+						</td>
+						<td class="rep-detail-value-text">
+							{{#if this.product.vat.value.meta.vat.value '0'}}
+								E
+							{{else}}
+
+							{{/if}}
+						</td>
+						<td class="rep-detail-value-number rep-detail-value-right">
+							{{number this.price.total}}
+						</td>
+					</tr>
+				{{/each}}
+				<tr class="rep-detail-footer-row" style="display: none">
+					<td class="rep-detail-value-text rep-detail-value-left">
+						TOTALES
+					</td>
+					<td class="rep-detail-value-number">
+
+					</td>
+					<td class="rep-detail-value-text">
+
+					</td>
+					<td class="rep-detail-value-number">
+
+					</td>
+					<td class="rep-detail-value-number">
+						{{number totals.taxsum}}
+					</td>
+					<td class="rep-detail-value-text">
+
+					</td>
+					<td class="rep-detail-value-number rep-detail-value-right">
+						{{number totals.total}}
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px" colspan="7">
+
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<td colspan="4" class="rep-detail-total-title">SUB-TOTAL PRODUCTOS EXENTOS</td>
+					<td class="rep-detail-total-value">
+						{{number totals.excent}}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<td colspan="4" class="rep-detail-total-title">SUB-TOTAL PRODUCTOS GRAVADOS</td>
+					<td class="rep-detail-total-value">
+						{{number totals.graven}}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<td colspan="4" class="rep-detail-total-title">ITBIS</td>
+					<td class="rep-detail-total-value">
+						{{number totals.taxsum}}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<td colspan="4" class="rep-detail-total-title">TOTAL GENERAL</td>
+					<td class="rep-detail-total-value">
+						<b>{{number totals.total}}</b>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="rep-footer-container">
+		{{> footer}}
+	</div>
+</div>

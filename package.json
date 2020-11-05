@@ -1,0 +1,29 @@
+{
+ "name": "albara",
+ "version": "0.0.1",
+ "description": "Albará multi-tenant web application",
+ "main": "entry.js",
+ "dependencies": {
+  "anxeb": "^1.0.7",
+  "anxeb.mongoose": "0.0.4",
+  "anxeb.vue": "0.0.4",
+  "canvas": "^2.5.0",
+  "jsbarcode": "^3.11.0",
+  "md5": "^2.2.1",
+  "puppeteer": "^1.17.0"
+ },
+ "devDependencies": {},
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git clone https://ing_erosario@bitbucket.org/nodrix/albara.git"
+ },
+ "keywords": [
+  "Albará"
+ ],
+ "author": "Eduardo Rosario <erosario@nodrix.com> (https://nodrix.com)",
+ "license": "ISC",
+ "homepage": "https://albara.growsoft.com"
+}
